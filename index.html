@@ -12,7 +12,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>game-night</title>
+  <title>Game Night Scorekeeper</title>
 </head>
 
 <body>
@@ -21,19 +21,45 @@
       <a class="navbar-brand ms-3" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
           loading="lazy">
-        <span class="ms-2">game-night</span>
+        <span class="ms-2">Game Night!</span>
       </a>
     </nav>
   </header>
+
   <main>
+
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
+
+      <div class="row justify-content-around">
+        <!-- <div class="col-6">
+          <button class="btn btn-primary mt-1" onclick="app.playersController.drawPlayers()">Draw Players</button>
+        </div> -->
+
+        <div class="col-3">
+          <form class="row mt-1" onsubmit="app.playersController.addPlayer()">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <button class="btn btn-primary mt-1">Add Player</button>
+          </form>
+        </div>
+
+        <div id="players" class="row mt-2">
+          <!-- <div class="col-3">
+            <div class="card text-center">
+                <h3>Name</h3>
+                  <p> 
+                  <i class="mdi mdi-minus-circle-outline fs-3" style="color: red" onclick="app.playersController.decreaseScore('${this.name}')"></i>
+                  <span><large>0</large></span>
+                  <i class="mdi mdi-plus-circle-outline fs-3" style="color: green" onclick="app.playersController.increaseScore('${this.name}')"></i>
+                  </p>
+            </div>
+          </div> -->
         </div>
       </div>
+
     </div>
+
   </main>
+
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
       <p><small>Made with 💖 by CodeWorks</small></p>
